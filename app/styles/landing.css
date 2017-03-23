@@ -1,0 +1,49 @@
+.header {
+    position: fixed;
+    height: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: #B8E5F5;
+}
+.title {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.content {
+    margin-left: 200px;
+    
+}
+.side {
+    position: absolute;
+    height: 100%;
+    top: 100px;
+    left: 0;
+    background: #AAD5E3;
+    width: 180px;
+    padding: 30px;
+}
+
+.button {
+    background-color: white;
+    border: none;
+    color: #AAD5E3;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+}
+
+ul {
+    margin: 0;
+    padding: 20px;
+    
+}
+ul li {
+    color: #fff;
+}
