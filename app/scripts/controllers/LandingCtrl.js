@@ -3,6 +3,7 @@
      
     function LandingCtrl(Room) {
         this.rooms = Room.all;
+        this.addRoom = Room.addRoom;
     }
 
     angular
