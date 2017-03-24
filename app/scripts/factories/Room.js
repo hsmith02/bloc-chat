@@ -5,10 +5,7 @@
         
         function addRoom(roomName) {
             rooms.$add({ name: roomName });
-            console.log("hello");
-            console.log("roomName");
         };
-        //addRoom('MyRoom');
         
         
         return {
