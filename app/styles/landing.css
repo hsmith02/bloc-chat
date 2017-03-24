@@ -17,6 +17,7 @@
     margin-left: 200px;
     
 }
+
 .side {
     position: absolute;
     height: 100%;
@@ -46,4 +47,34 @@ ul {
 }
 ul li {
     color: #fff;
+}
+
+.form {
+    position: absolute;
+    border-style: solid;
+    border-color: #CE9ADB;
+    margin-top: 200px;
+    margin-left: 400px;
+    background-color: white;
+}
+
+.formHeading {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    color: #CE9ADB;
+}
+
+.formContent {
+    padding: 20px;
+    color: #CE9ADB;
+    text-align: center;
+}
+
+.button2 {
+    margin-top: 5px;
+    border: none;
+    background-color: #CE9ADB;
+    color: white;
+    
 }
