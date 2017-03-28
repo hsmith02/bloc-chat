@@ -49,7 +49,7 @@ ul li {
     color: #fff;
 }
 
-.form {
+#theForm {
     position: absolute;
     border-style: solid;
     border-color: #CE9ADB;
@@ -77,4 +77,10 @@ ul li {
     background-color: #CE9ADB;
     color: white;
     
+}
+
+.container {
+    margin-top: 100px;
+    margin-left: 230px;
+    height: 800px;
 }
