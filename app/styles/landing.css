@@ -83,4 +83,10 @@ ul li {
     margin-top: 100px;
     margin-left: 230px;
     height: 800px;
+    color: black;
+}
+
+.messageList {
+    color: black;
+    background-color: aqua;
 }

@@ -1,18 +1,18 @@
 (function() {
     this.isFormOpen = false; 
+    this.isRoomOpen = false;
      
-    function LandingCtrl(Room) {
+    function LandingCtrl(Room, Message) {
         this.rooms = Room.all;
         this.addRoom = Room.addRoom;
         this.currentRoom = null;
     
         this.selectRoom = function(room) {
             this.currentRoom = room;
-            console.log(room.name);
         }
     }
 
     angular
         .module('blocChat')
-        .controller('LandingCtrl', ['Room', LandingCtrl]);
+        .controller('LandingCtrl', ['Room', 'Message', LandingCtrl]);
 })();
