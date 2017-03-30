@@ -46,7 +46,10 @@ ul {
     
 }
 ul li {
-    color: #fff;
+   
+}
+.roomlist {
+    color: white;
 }
 
 #theForm {
@@ -86,7 +89,13 @@ ul li {
     color: black;
 }
 
-.messageList {
-    color: black;
-    background-color: aqua;
+.messagelist {
+    color: #AAD5E3;
+}
+
+.roomHeading {
+    color: #AAD5E3;
+    padding-left: 20px;
+    padding-top: 20px;
+    
 }

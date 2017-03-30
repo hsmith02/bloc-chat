@@ -3,13 +3,14 @@
         var ref = firebase.database().ref().child('messages');
         var messages = $firebaseArray(ref);
         
+        function getByRoomId(roomId) {
+                
+            // filter messages by room ID                     
+            return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
+        };
+        
         return {
-            getByRoomId: function (roomId) {
-                // filter messages by room ID
-                ref.child('messages').orderByChild('roomId').equalTo('-Kg0sWDJuX-EcqOSShZ-').on('content', function(snapshot) {
-                    console.log(snapshot.val());
-                });
-            }
+            getByRoomId: getByRoomId 
         };
     }
     
