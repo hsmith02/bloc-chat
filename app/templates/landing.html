@@ -1,44 +1,43 @@
-<div class="header">
-    <h3 class="title">Bloc Chat</h3>
-</div>
-
-<div class="content">
+<div class="content">          
     <div class="side">
         <button class="button" type="button" ng-click="landing.createRoom()">New Room</button>
         <ul class="roomlist">
             <li ng-repeat="room in landing.rooms" ng-click="landing.openRoom(room)">{{ room.name }}</li>
         </ul>  
     </div>
-</div>
 
-<form id="theForm" ng-show="landing.isFormOpen">
-    <h3 class="formHeading">Create a New Room</h3>
-    <div class="formContent">
-    Enter a room name: <br>
-    <input type="text" ng-model="roomName"><br>
-        <div>
-            <input class="button2" type="button" value="Cancel" ng-click="isFormOpen = !isFormOpen">
-            <input class="button2" type="button" value="Create Room" ng-click="landing.addRoom(roomName)">
+    <div class="main">
+        <div id='home' ng-show='landing.showHome'>
+            <h1>Welcome back {{ landing.userName }}!</h1>
+            <p >Please select a room to continue.</p>
         </div>
-    </div>
-</form>
 
-<div class="container" ng-show="landing.isRoomOpen">
-    <h2 class="roomHeading">{{ landing.currentRoom }}</h2>
-    <ul class="messagelist">
-        <li ng-repeat="message in landing.roomMessages">{{ message.content }}</li>
-    </ul>  
-</div>
-
-<form id="usernameForm">
-    <h3 class="formHeading">Set a Username</h3>
-    <div class="formContent">
-    This name will appear when you send messages <br>
-    <input type="text"><br>
-        <div>
-            <input class="button2" type="button" value="Set Username">
+        <div class="room" ng-show="landing.isRoomOpen">
+            <h2 class="roomHeading">{{ landing.currentRoom }}</h2>
+            <ul class="messagelist">
+                <li ng-repeat="message in landing.roomMessages">{{ message.content }}</li>
+            </ul>  
         </div>
+        
+        <form class="form" ng-show="landing.isFormOpen">
+            <h3 class="formHeading">Create a New Room</h3>
+            <div class="formContent">
+                <p>Enter a room name:</p>
+                <input class="input" type="text" ng-model="roomName"><br>
+                <div>
+                    <input class="button2" type="button" value="Cancel" ng-click="landing.cancelNewRoom()">
+                    <input class="button2" type="button" value="Create Room" ng-click="landing.addRoom(roomName)">
+                </div>
+            </div>
+        </form>
+
+        <form class="form" ng-show="landing.showUserForm">
+            <h3 class="formHeading">Set a Username</h3>
+            <div class="formContent">
+                <p>This name will appear when you send messages</p>    
+                <input class="input" id="userName" type="text">
+                <input class="button2" type="button" value="Set Username" ng-click="landing.setUsername()">
+            </div>
+        </form>
     </div>
-</form>
-
-
+</div>

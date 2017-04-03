@@ -1,8 +1,9 @@
 (function() {
-    function BlocChatCookies($cookies) {
+    function BlocChatCookies($cookies) {        
         var currentUser = $cookies.get('blocChatCurrentUser');
         if (!currentUser || currentUser === '') {
             //do something to allow users to set their username
+            this.showUserForm = true;
         }
     }
     
