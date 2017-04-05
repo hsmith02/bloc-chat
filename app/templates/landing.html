@@ -14,9 +14,16 @@
 
         <div class="room" ng-show="landing.isRoomOpen">
             <h2 class="roomHeading">{{ landing.currentRoom }}</h2>
-            <ul class="messagelist">
-                <li ng-repeat="message in landing.roomMessages">{{ message.content }}</li>
-            </ul>  
+            <div id="messageBox">
+                <ul class="messagelist">
+                    <li ng-repeat="message in landing.roomMessages">{{ message.content }}</li>
+                </ul> 
+            </div>
+            
+            <div id="sendMessageContainer">
+                <input id="newMessageBox" class="input" type="text">
+                <input id="sendMessage" class="button2" type="button" value="Send" ng-click="landing.newMessage()">
+            </div>
         </div>
         
         <form class="form" ng-show="landing.isFormOpen">

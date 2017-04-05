@@ -23,7 +23,8 @@
         this.openRoom = function(room) {
             this.currentRoom = room.name;
             this.isRoomOpen = true;
-            this.isFormOpen = false;            
+            this.isFormOpen = false;
+            this.showHome = false;
             this.roomMessages = Message.getByRoomId(room.$id);
         }
                 
@@ -48,6 +49,21 @@
             localStorage.setItem('chatUserName', this.userName);
             this.showUserForm = false;
             this.showHome = true;
+        }
+        
+        this.newMessage = function() {
+            var messageContent = document.getElementById("newMessageBox").value;
+                        
+            var message = { 
+                username: this.username,
+                content: messageContent,
+                sentAt: new Date().toLocaleTimeString(),
+                roomId: room.$id
+            };
+            
+        
+            
+            Message.send(message);
         }
     }
 

@@ -131,5 +131,37 @@ ul li {
     color: #AAD5E3;
     padding-left: 20px;
     padding-top: 20px;
-    
+}
+
+#messageBox {
+    width: 500px;
+    height: 400px;
+    overflow: auto;
+    border: 3px solid #eee;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#newMessageBox {
+    display: inline;
+    float: left;
+    width: 375px;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+#sendMessage {
+    display: inline;
+    float: right;
+    margin-top: 22px;
+}
+
+#sendMessageContainer {
+    display: block;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
