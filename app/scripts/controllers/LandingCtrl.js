@@ -7,6 +7,7 @@
         this.roomMessages = null;
         this.showUserForm = true;
         this.showHome = false;
+        this.room = null;
         
         this.userName = localStorage.getItem('chatUserName');
         if (this.userName) {
@@ -25,6 +26,7 @@
             this.isRoomOpen = true;
             this.isFormOpen = false;
             this.showHome = false;
+            this.room = room;
             this.roomMessages = Message.getByRoomId(room.$id);
         }
                 
@@ -53,16 +55,15 @@
         
         this.newMessage = function() {
             var messageContent = document.getElementById("newMessageBox").value;
-                        
+            
             var message = { 
-                username: this.username,
+                username: this.userName,
                 content: messageContent,
                 sentAt: new Date().toLocaleTimeString(),
-                roomId: room.$id
+                roomId: this.room.$id
             };
             
-        
-            
+            document.getElementById("newMessageBox").value = "";            
             Message.send(message);
         }
     }

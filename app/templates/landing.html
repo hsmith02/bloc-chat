@@ -15,9 +15,13 @@
         <div class="room" ng-show="landing.isRoomOpen">
             <h2 class="roomHeading">{{ landing.currentRoom }}</h2>
             <div id="messageBox">
-                <ul class="messagelist">
-                    <li ng-repeat="message in landing.roomMessages">{{ message.content }}</li>
-                </ul> 
+                <div class="messagelist">
+                    <div ng-repeat="message in landing.roomMessages">
+                        <h3 class="username">{{ message.username }}</h3><p class="messageTime">{{ message.sentAt }}</p>
+                        <p class="messageContent">{{ message.content }}</p>
+                        
+                    </div>
+                </div> 
             </div>
             
             <div id="sendMessageContainer">
